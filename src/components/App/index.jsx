@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
 import routes from 'src/routes';
 import { Switch, Route } from 'react-router-dom'
-import NotFound from 'pages/NotFound';
+
+//Layout components
+import Header from 'containers/Header';
+import Footer from 'containers/Footer';
 
 
 class App extends Component {
@@ -14,7 +17,7 @@ class App extends Component {
     render() {
         return  (
             <div>
-                <p>Header here</p>
+                <Header/>
                 <Switch>
                     {
                         routes
@@ -24,7 +27,7 @@ class App extends Component {
                             ))
                     }
                 </Switch>
-                <p>Footer here</p>
+                <Footer/>
             </div>
             );
     }

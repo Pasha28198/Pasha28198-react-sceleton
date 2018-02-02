@@ -1,3 +1,5 @@
+// if you want see you route when user loggedIn, then
+//you must add to this route setting auth: true.
 import NotFound from 'pages/NotFound';
 import HomePage from 'pages/HomePage';
 
