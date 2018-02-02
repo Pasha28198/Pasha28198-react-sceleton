@@ -1,9 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types'
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import {composeWithDevTools} from 'redux-devtools-extension'
+import {composeWithDevTools} from 'redux-devtools-extension';
 import { BrowserRouter } from 'react-router-dom';
 import reduxThunk from 'redux-thunk';
 import reducers from './store/reducers/index';
@@ -13,7 +12,7 @@ import App from 'components/App';
 const store = createStore(reducers, composeWithDevTools(
     applyMiddleware(reduxThunk),
 ));
-const root =  window.document.querySelector('#root')
+const root =  window.document.querySelector('#root');
 ReactDOM.render(
     <Provider store={store}>
         <BrowserRouter>
