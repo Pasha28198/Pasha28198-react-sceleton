@@ -32,6 +32,7 @@
     "webpack-dev-server": "^2.11.1"
   },
   "dependencies": {
+    "path": "^0.12.7",
     "react": "^16.2.0",
     "react-cookie": "^2.1.2",
     "react-dom": "^16.2.0",

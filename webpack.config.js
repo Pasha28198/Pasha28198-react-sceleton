@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path');
 
 const config = {
     context: __dirname,
@@ -37,7 +38,16 @@ const config = {
         new ExtractTextPlugin('src/public/stylesheets/app.css', {
             allChunks: true
         })
-    ]
+    ],
+    resolve: {
+        alias: {
+            components: path.resolve(__dirname, './src/components/'),
+            pages: path.resolve(__dirname, './stc/pages'),
+            containers: path.resolve(__dirname, './stc/containers'),
+            actions: path.resolve(__dirname, './stc/store/actions'),
+            reducers: path.resolve(__dirname, './stc/store/reducers')
+        }
+    }
 };
 
 module.exports = config;
